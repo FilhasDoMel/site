@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+#loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: #d0ae6b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todaATela{
+    display: none;
+}
+
+#loader.hidden {
+    animation: tirarPreLoad 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tirarPreLoad{
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+* {padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+html {
+    scroll-behavior: smooth;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #5d4312;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #d0ae6b;
+    border-radius: 20px;
+    border: 3px solid #d0ae6b;
+}
+p {text-align: justify;}
+.bloco {
+    height: auto;
+    width: 100%;
+    padding: 30px;
+    padding-top: 60px;
+}
+.section1 {
+    position: relative;
+    height: 100vh;
+}
+.section1 img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+.link_move_screen, .link {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    height: 600px;
+    margin: 0.1px;
+    padding: 15px 5px;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 7px;
+}
+.link {color: black;}
+.link:hover {
+    background-color: #d0ae6b;
+    color: #5d4312;
+}
+
+.link:hover{
+    color: #5d4312;
+    background-color: #e0c389;
+}
+.topo .menu {
+    position: absolute;
+    top: 260px;
+}
+.topo {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    position: absolute;
+    z-index: 10
+    ;
+}
+.topo .afma_logo {
+    text-align: center;
+}
+.topoFixo {
+    width: 100%;
+    height: 60px;
+    top: -69px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.section1 .topo .afma_logo {
+    display: flex;
+    flex-direction: row;
+}
+.menu_celular, .menu_celular_img, .menu_celular_cancelar {display: none;}
+
+#foto_abelha_topo {position: fixed;}
+#fundo_branco {background-color: #fff;}
+.logo {
+    cursor: pointer;
+    margin: 10px;
+}
+@keyframes mover{
+    0% {top: -69px;}
+    100% {top: 0%;}
+}
+@keyframes retornar{
+    0% {top: 0%;}
+    100% {top: -69px}
+}
+.topoFixo .all{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    background-color: #d0ae6b;
+    align-items: center;
+    border-radius: 60px;
+    padding: 30px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 4px #000000;
+    max-width: 90%;
+    position: absolute;
+    z-index: 10;
+}
+.seta_div {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 90%;
+    right: 1%;
+    z-index: 20;
+    color: #d0ae6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.section4 {height: 300%;}
+.section4 .texto_motivation .img_right
+{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 30px;
+    align-items: center;
+}
+.section4 .texto_motivation .img_right img, .section4 .texto_motivation .img_left img {width: 40%}
+
+.section4 .texto_motivation .img_left
+{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 30px;
+    align-items: center;
+}
+.section4 .texto_motivation .img_left .txt {padding-left: 25px;}
+.txt {padding-right: 25px;}
+.section5 .local {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section5 .local .linha {
+    color: #d0ae6b;
+    background-color: #d0ae6b;
+    width: 5px;
+    height: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 5px 0;
+}
+
+.imagens_locais_venda h3 {
+    margin-top: -440px;
+}
+
+.imagens_locais_venda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.imagens_locais_venda img{
+    width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2000ms;
+    position: absolute;
+    z-index: 1;
+}
+
+.imagens_locais_venda .selected {
+    opacity: 1;
+}
+
+.local_urbano {width: 45%;}
+
+.section5 .local_urbano .local_link a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 240px;
+    margin-left: 0px;
+    text-decoration: none;
+}
+.local_urbano .local_link svg {width: 40px; height: 30px; transition: .2s; color: #d0ae6b;}
+.local_urbano .local_link a:hover > svg {color: #442f06;}
+.local_urbano .local_link a p {margin-top: 20px; transition: .2s; background-color: #e0c389; border-radius: 20px; padding: 5px 10px; color: #442f06;}
+.local_urbano .local_link a:hover > p {color: #e0c389; background-color: #442f06;}
+
+.section6 {background-color: #5d4312; padding-top: 20px; border-radius: 15px 15px 0 0;}
+.section6 h1 {color: #fff;}
+.section6 .contatos {
+    display: flex;
+    justify-content:left;
+    width: 300px;
+    align-items: center;
+    margin-top: 10px;
+}
+.section6 .contatos a, .telefone {display: flex; flex-direction: row; color: #cfb277; transition: .2s;}
+.section6 .contatos a:hover {color: #fff;}
+.section6 .contatos svg {height: 20px; width: 20px;}
+.section6 .contatos a:hover > .fundo_insta {background-color: #993399;}
+.section6 .contatos a:hover > .fundo_whatsapp {background-color: #34af23;}
+
+.contatos p {margin-top: 7px; margin-left: 5px;}
+.telefone p {margin-top: 20px;}
+.section6 .chamada {color: rgba(199, 192, 192, 0.747);}
+
+.fundo_insta, .fundo_telefone, .fundo_whatsapp {
+    width: 40px;
+    height: 40px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+
+
+.redes_sociais_menu {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.redes_sociais_menu .fundo_insta {background-color: #993399;}
+.redes_sociais_menu .fundo_whatsapp {background-color: #34af23;}
+.redes_sociais_menu .fundo_insta svg, .redes_sociais_menu .fundo_whatsapp svg {fill: #fff;}
+
+.developedBy {
+    background-color: #442f06;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 15px 15px 0 0;
+    margin-top: -20px;
+    justify-content: center;
+    display: flex;
+}
+.developedBy a {color: #d0ae6b;}
+.developedBy p {margin: 0;}
+
+
+@media (max-width: 750px) {
+    .bloco {text-align: justify;}
+    .bloco h1 {margin-bottom: 5px;}
+    .topoFixo {display: none;}
+    .section1 .topo .afma_logo .traco {display: none;}
+    .section1 .topo .afma_logo {display: flex; flex-direction: column;}
+    .section1 .topo .afma_logo .afma{font-size: 30pt;}
+    .section1 .topo .afma_logo .descricao {font-size: 15pt;}
+    .topo {height: 400px;}
+    .topo .afma_logo {margin-top: -200px;}
+    .topo .afma_logo .descricao{font-weight: 100;}
+    .topo .menu .link {font-size: 11pt; width: 160px; height: 50px; text-align: center; background-color: #5d4312; margin: 5px; color: white;}
+    .topo .menu {display: flex; flex-wrap: wrap; justify-content: center; top: 190px;}
+    .menu_celular {
+        position: fixed; 
+        top: 0%; 
+        height: 100%; 
+        display: block; 
+        width: 200px;
+        margin-left: -360px;
+        z-index: 10;
+        background-color: #d0ae6b;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .menu_celular ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        padding-top: 2px;
+        height: auto; 
+    }
+    .menu_celular ul li {
+        display: block;
+        margin-top: 15px;
+    }
+    @keyframes slideMenu {
+        0% {margin-left: -360px;}
+        100% {margin-left: 0px;}
+    }
+    @keyframes slideMenuReturn {
+        0% {margin-left: 0px;}
+        100% {margin-left: -360px;}
+    }
+    .menu_celular_img {position: fixed; top: 20px;left: 20px; display: block; z-index: 9;}
+    .menu_celular_img svg {height: 40px; width: 40px;}
+    .menu_celular_cancelar {position: fixed; top: 15px; margin-left: 215px; z-index: 9;}
+    .menu_celular_cancelar svg {height: 40px; width: 40px; cursor: pointer;}
+
+    .section4 .texto_motivation .img_left,
+    .section4 .texto_motivation .img_right {
+        display: flex;
+        flex-direction: column;
+    }
+    .section4 .texto_motivation .img_right img,
+    .section4 .texto_motivation .img_left img {width: 100%;}
+    .section4 .texto_motivation .img_left .txt {padding-left: 0px;}
+    .section4 .texto_motivation .img_left .txt,
+    .section4 .texto_motivation .img_right .txt {text-align: justify;}
+    .txt {padding-right: 0px;}
+    .section4 .texto_motivation .img_left,
+    .section4 .texto_motivation .img_right {padding: 20px 10px;}
+    .section5 .local {display: flex; flex-direction: column;}
+    .local_urbano {width: 100%;}
+    .section5 .local .linha {display: none;}
+    .local .imagens_locais_venda {position: relative; height: 500px; width: 100%;}
+    .imagens_locais_venda h3 {
+        margin-top: -340px;
+    }
+    .section6 .contatos .fundo_insta {background-color: #993399;}
+    .section6 .contatos .fundo_whatsapp {background-color: #34af23;}
+    .section6 .contatos .fundo_insta svg, .section6 .contatos .fundo_whatsapp svg {fill: #fff;}
+    .seta_div {margin-right: 10px;}
+}
+
+@media (max-width: 908px) {
+    .topoFixo .all .menu {font-size: 14px;}
+    .topoFixo .all .logo {display: none;}
+    .section1 .topo .afma_logo h1 {font-size: 20pt;}
+    .section5 .local_urbano iframe {width: 100%;}
+
+}
